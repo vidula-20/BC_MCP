@@ -60,11 +60,11 @@ def get_store_credentials(store_id: int) -> Optional[Dict[str, str]]:
         global ACCESS_TOKEN
         connection = mysql.connector.connect(
             charset="utf8mb4",
-            host=os.environ.get("DB_HOST", "158.220.93.14"),
+            host=os.environ.get("DB_HOST", ""),
             port=int(os.environ.get("DB_PORT", 3407)),
-            user=os.environ.get("DB_USER", "root"),
-            password=os.environ.get("DB_PASS", "ZasHZLBznK0T"),
-            database=os.environ.get("DB_NAME", "shopify_stagingpro_dev")
+            user=os.environ.get("DB_USER", ""),
+            password=os.environ.get("DB_PASS", ""),
+            database=os.environ.get("DB_NAME", "")
         )
         
         cursor = connection.cursor(dictionary=True)
